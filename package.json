@@ -1,11 +1,11 @@
 {
   "name": "igti-font-end",
   "version": "1.0.0",
-  "description": "",
+  "description": "2a parte do modulo 1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server"
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,5 @@
     "url": "https://github.com/vieira-gabriel/IGTI-Font-End/issues"
   },
   "homepage": "https://github.com/vieira-gabriel/IGTI-Font-End#readme",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  },
-  "dependencies": {
-    "materialize-css": "^1.0.0-rc.2"
-  }
+  "devDependencies": {}
 }
