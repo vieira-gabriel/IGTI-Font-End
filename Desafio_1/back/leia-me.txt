@@ -1,0 +1,6 @@
+Para que o backend funcione, execute os seguintes comandos (sem aspas):
+
+1) "npm init -y", para iniciar o backend
+2) "npm install", para instalar as dependências
+3) "npm start", para "subir" o backend
+
