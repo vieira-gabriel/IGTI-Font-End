@@ -3,13 +3,13 @@ let inputName = null;
 let currentIndex = null;
 let isEditing = false;
 
-window.addEventListener("load", () => {
+function start() {
   inputName = document.querySelector("#inputName");
 
   preventFormSubmit();
   startInput();
   render();
-});
+}
 
 // Essa função implementa a aplicação de pagina unica
 function preventFormSubmit() {
@@ -112,3 +112,5 @@ function clearInput() {
   inputName.value = "";
   inputName.focus();
 }
+
+start();
