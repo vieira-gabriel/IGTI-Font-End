@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "minha-app": {
+    "desafio-guiado": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/minha-app",
+            "outputPath": "dist/desafio-guiado",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "minha-app:build"
+            "browserTarget": "desafio-guiado:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "minha-app:build:production"
+              "browserTarget": "desafio-guiado:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "minha-app:build"
+            "browserTarget": "desafio-guiado:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "minha-app:serve"
+            "devServerTarget": "desafio-guiado:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "minha-app:serve:production"
+              "devServerTarget": "desafio-guiado:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "minha-app"
+  "defaultProject": "desafio-guiado"
 }
