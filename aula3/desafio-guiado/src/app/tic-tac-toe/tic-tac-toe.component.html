@@ -1,20 +1,20 @@
 <p>Jogador atual: {{ currentPlayer }}</p>
-<p>Vencedor:</p>
-<p><button>Reuniciar partida</button></p>
+<p>Vencedor: {{ winner }}</p>
+<p><button (click)="reset()">Reuniciar partida</button></p>
 <table>
   <tr>
-    <td>{{ board[0][0] }}</td>
-    <td>{{ board[0][1] }}</td>
-    <td>{{ board[0][2] }}</td>
+    <td (click)="processPlay(0, 0)">{{ board[0][0] }}</td>
+    <td (click)="processPlay(0, 1)">{{ board[0][1] }}</td>
+    <td (click)="processPlay(0, 2)">{{ board[0][2] }}</td>
   </tr>
   <tr>
-    <td>{{ board[1][0] }}</td>
-    <td>{{ board[1][1] }}</td>
-    <td>{{ board[1][2] }}</td>
+    <td (click)="processPlay(1, 0)">{{ board[1][0] }}</td>
+    <td (click)="processPlay(1, 1)">{{ board[1][1] }}</td>
+    <td (click)="processPlay(1, 2)">{{ board[1][2] }}</td>
   </tr>
   <tr>
-    <td>{{ board[2][0] }}</td>
-    <td>{{ board[2][1] }}</td>
-    <td>{{ board[2][2] }}</td>
+    <td (click)="processPlay(2, 0)">{{ board[2][0] }}</td>
+    <td (click)="processPlay(2, 1)">{{ board[2][1] }}</td>
+    <td (click)="processPlay(2, 2)">{{ board[2][2] }}</td>
   </tr>
 </table>
