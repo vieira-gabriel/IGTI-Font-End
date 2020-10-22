@@ -1,43 +1,33 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {getNewTimestamp} from './helpers/dateTimeHelpers';
 
-export default class App extends Component {
-  constructor() {
-    super();
+export default function App() {
+  const [clickArray, setCliclArray] = useState([]);
 
-    this.state = {
-      clickArray: [],
-    }
-  }
+  useEffect(() => {
+    document.title = clickArray.length;
+  });
 
-  handleClick = () =>{
-    const newClickArray = Object.assign([], this.state.clickArray);
+  const handleClick = () =>{
+    const newClickArray = Object.assign([], clickArray);
 
     newClickArray.push(getNewTimestamp());
 
-    this.setState({clickArray: newClickArray});
+    setCliclArray(newClickArray);
   };
 
-  componentDidUpdate() {
-    document.title = this.state.clickArray.length.toString();
-  }
+  return (
+    <div>
+      <h1>
+        React e <em>Hooks</em>
+      </h1>
 
-  render() {
-    const { clickArray } = this.state;
+      <button onClick={handleClick}>clique aqui</button>
 
-    return (
-      <div>
-        <h1>
-          React e <em>Class Components</em>
-        </h1>
-
-        <button onClick={this.handleClick}>clique aqui</button>
-
-        <ul>{clickArray.map(item => {
-          return <li key={item}>{item}</li>
-        })}</ul>
-      </div>
-    );
-  }
+      <ul>{clickArray.map(item => {
+        return <li key={item}>{item}</li>
+      })}</ul>
+    </div>
+  );
 }
